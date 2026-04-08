@@ -782,6 +782,7 @@ GameObject:
   - component: {fileID: 928187573}
   - component: {fileID: 928187572}
   - component: {fileID: 928187575}
+  - component: {fileID: 928187576}
   m_Layer: 0
   m_Name: AirCraftRoot
   m_TagString: Player
@@ -831,7 +832,7 @@ MonoBehaviour:
   pitchSpeed: 45
   yawSpeed: 45
   rollSpeed: 99
-  thrustSpeed: 50
+  thrustSpeed: 100
 --- !u!4 &928187574
 Transform:
   m_ObjectHideFlags: 0
@@ -864,12 +865,27 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 24.451965, y: 10.591179, z: 33.03531}
   m_Center: {x: 1.1383514, y: 4.216525, z: -2.213852}
+--- !u!114 &928187576
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 928187571}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c83479283a2a4504f91c8b8d0ddd2efb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AircraftThreatHandler
+  respawnPoint: {fileID: 0}
+  hitAudioSource: {fileID: 0}
+  examManager: {fileID: 0}
 --- !u!1 &1035171555
 GameObject:
   m_ObjectHideFlags: 0
@@ -1983,13 +1999,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2090853285}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -828.12695, y: -0.00001, z: -1930.7343}
+  m_LocalRotation: {x: -0, y: -0, z: -0.38268322, w: 0.9238797}
+  m_LocalPosition: {x: -213.28992, y: 214.16292, z: 88.26575}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -45}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -2007,5 +2023,5 @@ SceneRoots:
   - {fileID: 1857437915}
   - {fileID: 1287320172}
   - {fileID: 508009779}
-  - {fileID: 527537491}
   - {fileID: 2090853287}
+  - {fileID: 527537491}

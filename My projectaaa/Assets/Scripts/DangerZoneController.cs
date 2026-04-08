@@ -12,8 +12,12 @@ public class DangerZoneController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        Debug.Log("DangerZone trigger enter: " + other.name);
+
         if (!other.CompareTag("Player"))
             return;
+
+        Debug.Log("Player entered danger zone");
 
         examManager.EnterDangerZone();
 
@@ -22,6 +26,8 @@ public class DangerZoneController : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
+        Debug.Log("DangerZone trigger exit: " + other.name);
+
         if (!other.CompareTag("Player"))
             return;
 
@@ -32,13 +38,16 @@ public class DangerZoneController : MonoBehaviour
         }
 
         missileLauncher.DestroyActiveMissile();
-
         examManager.ExitDangerZone();
     }
 
     private IEnumerator MissileCountdown()
     {
+        Debug.Log("Missile countdown started");
+
         yield return new WaitForSeconds(missileDelay);
+
+        Debug.Log("Launching missile now");
 
         missileLauncher.Launch(playerTransform);
     }

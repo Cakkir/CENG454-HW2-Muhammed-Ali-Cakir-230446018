@@ -68,8 +68,7 @@ MeshRenderer:
   m_MeshLodSelectionBias: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  m_Materials: []
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -108,7 +107,7 @@ CapsuleCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -142,7 +141,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!114 &-4467277779979741557
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -155,3 +154,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da4a6fcce4c62e54e93965821d91cb1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MissileHoming
+  moveSpeed: 10
+  turnSpeed: 5

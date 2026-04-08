@@ -31,6 +31,11 @@ public class FlightExamManager : MonoBehaviour
         UpdateHUD("Threat cleared.", "You left the danger zone.");
     }
 
+    public void MissileHit()
+{
+    UpdateHUD("Aircraft hit!", "Mission failed. Reset and try again.");
+}
+
     private void UpdateHUD(string statusMessage, string missionMessage)
     {
         if (statusText != null)
