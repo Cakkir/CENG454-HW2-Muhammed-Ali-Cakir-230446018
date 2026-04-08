@@ -2,7 +2,6 @@ using UnityEngine;
 
 public class FlightController : MonoBehaviour
 {
-
     [SerializeField] private float pitchSpeed = 45f;
     [SerializeField] private float yawSpeed = 45f;
     [SerializeField] private float rollSpeed = 45f;
